@@ -1,11 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-
-androidExtensions {
-    experimental = true
-}
 
 android {
     compileSdkVersion 31
@@ -26,8 +21,7 @@ android {
         }
     }
 
-    lintOptions {
-        // if true, stop the gradle build if errors are found
+    lint {
         abortOnError true
     }
 
